@@ -7,7 +7,7 @@ from segment import segment_image
 classes = ['0','1','2','3','4','5','6','7','8','9','+','-','*','/']
 
 def predict_expression(image_path):
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu")
 
     model = MathCNN().to(device)
     model.load_state_dict(torch.load("math_cnn.pth", map_location=device))
