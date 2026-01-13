@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 from predict import predict_expression
 
-st.title("✍️ Handwritten Math Solver")
+st.title("Handwritten Math Solver")
 
 uploaded = st.file_uploader("Upload an image of handwritten math expression", type=["png","jpg","jpeg"])
 
